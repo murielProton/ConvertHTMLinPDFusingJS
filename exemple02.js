@@ -6,10 +6,8 @@ function ymd(){
 function myFunction() {
     var date = ymd();
     var doc = new jsPDF('landscape');
-    doc.text(20, 20, 'Hello world!' + $("#nom").first().val());
-    doc.text(20, 30, 'This is client-side Javascript, pumping out a PDF.');
-    doc.addPage();
-    doc.text(20, 20, 'Do you like that?');
-
-    doc.save('feuille_de_caisse' + date + '.pdf');
+    var firstName = document.getElementById("prenom").value;
+    doc.text(5, 10, firstName);
+    doc.text(5, 15, document.getElementById("nom").value);
+    doc.save('feuille_de_caisse_'+ date + '.pdf');
 }

@@ -15,7 +15,12 @@
 <body>
     <div>
         <h1 id="heading">Feuille de Caisse</h1>
-        <input id="nom" type="text" />
+        <form action="/action_page.php">
+            <label for="prenom">Prénom:</label><br>
+            <input type="text" id="prenom" name="prenom" value="Prénom"><br>
+            <label for="nom">Nom</label><br>
+            <input type="text" id="nom" name="nom" value="Nom de Famille"><br><br>
+          </form> 
     </div>
 
 <button onclick="javascript:myFunction()">Générer un PDF</button>
